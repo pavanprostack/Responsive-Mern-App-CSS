@@ -22,7 +22,7 @@ const CreateProduct = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    const url = `http://127.66.77.88:5000/product/create/`
+    const url = `https://dull-jade-lemming-coat.cyclic.app/product/create/`
     Axios.post(url, product).then((response) => {
       console.log(response.data);
       setSubmitted(true);

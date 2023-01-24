@@ -9,7 +9,7 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const url = `http://127.66.77.88:5000/product/all`
+    const url = `https://dull-jade-lemming-coat.cyclic.app/product/all`
     Axios.get(url).then((response) => {
       setProducts(response.data);
     }).catch(() => { })

@@ -8,7 +8,7 @@ import '../Admin/admin.scss'
 const Admin = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    const url = `http://127.66.77.88:5000/product/all`
+    const url = `https://dull-jade-lemming-coat.cyclic.app/product/all`
     Axios.get(url).then((response) => {
       setProducts(response.data);
     }).catch(() => { })
@@ -17,7 +17,7 @@ const Admin = () => {
   const navigate = useNavigate()
 
   const delProduct = (id) => {
-    const url = `http://127.66.77.88:5000/product/${id}`
+    const url = `https://dull-jade-lemming-coat.cyclic.app/product/${id}`
     Axios.delete(url).then((response) => {
       console.log(response.data);
       navigate(0);
