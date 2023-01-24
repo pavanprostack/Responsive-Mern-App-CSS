@@ -4,7 +4,7 @@ import '../Navbar/navbar.scss'
 
 const Navbar = () => {
   return <>
-    <div className="navbar">
+    <div className="navbar sticky">
       <div className="wrapper">
         <div className='nav-link'>
           <h2><a to="/">Mern-App</a></h2>

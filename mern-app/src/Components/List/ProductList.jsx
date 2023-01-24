@@ -16,30 +16,31 @@ const ProductList = () => {
   }, [])
 
   return <>
-    <div className="container mt-5">
-        {
-          products.length > 0 ? <>
-            {
-              products.map((product)=>{
-                return <div className="col-3" key={product.id}>
-                  <div className="card-list">
-                    <div className="card-header">
-                      <img src={product.image} alt="img" width='70px'/>
-                    </div>
-                    <div className="card-body">
-                      <ul className='list-group'>
-                        <li className='list-group-item'>Name : <b>{product.name}</b></li>
-                        <li className='list-group-item'>Price : <b>{product.price}</b></li>
-                        <li className='list-group-item'>Qty : <b>{product.qty}</b></li>
-                      </ul>
-                    </div>
+    <div className="container">
+      {
+        products.length > 0 ? <>
+          {
+            products.map((product) => {
+              return <div key={product.id}>
+                <div className="card-list">
+                  <div className="card-header">
+                    <img src={product.image} alt="img" width='90px' />
                   </div>
+                  <div className="card-body">
+                    <ul>
+                      <li className='list-group-item'><b>Name</b> : {product.name}</li>
+                      <li className='list-group-item'><b>Price</b> : {product.price}</li>
+                      <li className='list-group-item'><b>Qty</b> : {product.qty}</li>
+                    </ul>
+                  </div>
+
                 </div>
-              })
-            }
-          </> : null
-        }
-      </div>
+              </div>
+            })
+          }
+        </> : null
+      }
+    </div>
   </>
 }
 

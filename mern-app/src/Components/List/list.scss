@@ -1,0 +1,33 @@
+.container {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    .card-list {
+        border: 1px solid;
+        width: 200px;
+
+        .card-header {
+            img {
+                display: block;
+               margin: auto;
+              }
+        }
+
+        .card-body {
+            display: flex;
+            justify-content: space-between;
+
+            ul {
+                list-style: none;
+                white-space: nowrap;
+
+                .list-group-item {}
+            }
+        }
+
+    }
+
+}

@@ -54,16 +54,16 @@ const CreateProduct = () => {
           <div className="card-body">
             <form onSubmit={submitHandler}>
               <div className='form-group'>
-                <input type="text" placeholder='Product Name' onChange={getInput} name='name' />
+                <input type="text" placeholder='product name' onChange={getInput} name='name' />
               </div>
               <div className='form-group'>
                 <input type="file" className='file' onChange={changeImage} name='image' />
               </div>
               <div className='form-group'>
-                <input type="text" placeholder='Price' onChange={getInput} name='price' />
+                <input type="text" placeholder='price' onChange={getInput} name='price' />
               </div>
               <div className='form-group'>
-                <input type="text" placeholder='qty' onChange={getInput} name='qty' />
+                <input type="text" placeholder='qty(kgs)' onChange={getInput} name='qty' />
               </div>
               <div className='form-group'>
                 <input type="text" placeholder='info' onChange={getInput} name='info' />

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Axios from 'axios';
 import { Navigate, useParams } from 'react-router-dom';
 
+import '../Edit/edit.scss'
+
 const Edit = () => {
     const [product_Id] = useState(useParams().id)
     const [updated, setUpdated] = useState(false);
@@ -48,45 +50,35 @@ const Edit = () => {
     }
 
     return <>
-    {
-       updated ? <Navigate to='/admin' /> :
-    
-        <div className="container mt-5">
-            {/* <pre>{JSON.stringify(selectedProduct)}</pre>
-            <pre>{JSON.stringify(product_Id)}</pre>
-            <pre>{JSON.stringify(updated)}</pre> */}
-            <div className="row">
-                <div className="col-4">
-                    <div className="card">
-                        <div className="card-header-form">
-                            <h1>Update Product</h1>
-                        </div>
-                        <div className="card-body bg-dark">
+        {
+            updated ? <Navigate to='/admin' /> :
+                <div className="card">
+                    <div className="card-header">
+                        <h2>Update Product</h2>
+                    </div>
+                    <div className="card-body">
 
-                            <form onSubmit={submitHandler}>
-                                <div className='form-group'>
-                                    <input type="text" name='name' value={selectedProduct.name} className='form-control' onChange={updateHandler} placeholder='Product Name' />
-                                </div>
-                                <div className='form-group'>
-                                    <input type="file" name='image' className='form-control-file' onChange={changeImage} placeholder='Image' />
-                                </div>
-                                <div className='form-group'>
-                                    <input type="number" name='price' value={selectedProduct.price} className='form-control' onChange={updateHandler} placeholder='Price' />
-                                </div>
-                                <div className='form-group'>
-                                    <input type="number" name='qty' value={selectedProduct.qty} className='form-control' onChange={updateHandler} placeholder='Qty' />
-                                </div>
-                                <div className='form-group'>
-                                    <input type="text" name='info' value={selectedProduct.info} className='form-control' onChange={updateHandler} placeholder='Info' />
-                                </div>
-                                <input type="submit" className='btn1' value='Update'  onChange={updateHandler}/>
-                            </form>
-                        </div>
+                        <form onSubmit={submitHandler}>
+                            <div className='form-group'>
+                                <input type="text" name='name' value={selectedProduct.name} onChange={updateHandler} placeholder='product name' />
+                            </div>
+                            <div className='form-group'>
+                                <input type="file" name='image' className='file' onChange={changeImage} placeholder='image' />
+                            </div>
+                            <div className='form-group'>
+                                <input type="number" name='price' value={selectedProduct.price} onChange={updateHandler} placeholder='price' />
+                            </div>
+                            <div className='form-group'>
+                                <input type="number" name='qty' value={selectedProduct.qty} onChange={updateHandler} placeholder='qty(kgs)' />
+                            </div>
+                            <div className='form-group'>
+                                <input type="text" name='info' value={selectedProduct.info} onChange={updateHandler} placeholder='info' />
+                            </div>
+                            <input type="submit" className='btn' value='Update' onChange={updateHandler} />
+                        </form>
                     </div>
                 </div>
-            </div>
-        </div>
-    }
+        }
     </>
 }
 
