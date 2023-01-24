@@ -37,7 +37,7 @@ const connectionParams = {
 }
 
 mongoose.connect(mongo_Url, connectionParams).then((response) => {
-    console.log(chalk.blueBright(`Mongo DB - Connected Successfully.`))
+    console.log(chalk.blue(`Mongo DB - Connected Successfully.`))
 }).catch((err) => {
     console.log(err);
     process.exit(1);
