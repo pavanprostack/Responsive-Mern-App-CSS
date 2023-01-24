@@ -20,8 +20,8 @@ const ProductList = () => {
       {
         products.length > 0 ? <>
           {
-            products.map((product) => {
-              return <div key={product.id}>
+            products.map((product, index) => {
+              return <div key={index}>
                 <div className="card-list">
                   <div className="card-header">
                     <img src={product.image} alt="img" width='90px' />
