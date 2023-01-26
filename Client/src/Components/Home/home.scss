@@ -1,10 +1,21 @@
-.home{
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom right, #3f05bd, rgb(243, 245, 237), #1f14b6);
+body {
+    overflow: hidden;
+    /* Hide scrollbars */
 
-    img{
+    .home {
+        display: block;
         margin: auto;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        clear: both;
+        overflow: hidden;
+        background-image: linear-gradient(to bottom right, #3f05bd, rgb(243, 245, 237), #1f14b6);
+
+        img {
+            width: 39%;
+            height: 100%;
+            margin: auto;
+        }
     }
 }
